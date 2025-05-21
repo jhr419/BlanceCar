@@ -1,0 +1,44 @@
+blancecar\encoder.o: ..\UserLibs\Devices\Src\encoder.c
+blancecar\encoder.o: ../UserLibs/Devices/Inc/encoder.h
+blancecar\encoder.o: ../Core/Inc/main.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+blancecar\encoder.o: ../Core/Inc/stm32f4xx_hal_conf.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+blancecar\encoder.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+blancecar\encoder.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
+blancecar\encoder.o: ../Drivers/CMSIS/Include/core_cm4.h
+blancecar\encoder.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\encoder.o: ../Drivers/CMSIS/Include/cmsis_version.h
+blancecar\encoder.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+blancecar\encoder.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+blancecar\encoder.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+blancecar\encoder.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+blancecar\encoder.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+blancecar\encoder.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+blancecar\encoder.o: ../Core/Inc/tim.h
+blancecar\encoder.o: ../UserLibs/Devices/Inc/car.h
+blancecar\encoder.o: ../UserLibs/Devices/Inc/motor.h
+blancecar\encoder.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\encoder.o: ../UserLibs/Devices/Inc/imu.h
+blancecar\encoder.o: ../UserLibs/Bsp/Inc/MPU6500.h
+blancecar\encoder.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\encoder.o: ../UserLibs/Controller/Inc/pid.h

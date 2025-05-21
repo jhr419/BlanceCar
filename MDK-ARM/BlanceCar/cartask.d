@@ -1,0 +1,67 @@
+blancecar\cartask.o: ..\UserLibs\Tasks\Src\carTask.c
+blancecar\cartask.o: ../UserLibs/Tasks/Inc/carTask.h
+blancecar\cartask.o: ../Core/Inc/main.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+blancecar\cartask.o: ../Core/Inc/stm32f4xx_hal_conf.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+blancecar\cartask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+blancecar\cartask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
+blancecar\cartask.o: ../Drivers/CMSIS/Include/core_cm4.h
+blancecar\cartask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\cartask.o: ../Drivers/CMSIS/Include/cmsis_version.h
+blancecar\cartask.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+blancecar\cartask.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+blancecar\cartask.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+blancecar\cartask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+blancecar\cartask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+blancecar\cartask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+blancecar\cartask.o: ../UserLibs/Devices/Inc/car.h
+blancecar\cartask.o: ../UserLibs/Devices/Inc/motor.h
+blancecar\cartask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\cartask.o: ../Core/Inc/tim.h
+blancecar\cartask.o: ../UserLibs/Devices/Inc/encoder.h
+blancecar\cartask.o: ../UserLibs/Devices/Inc/imu.h
+blancecar\cartask.o: ../UserLibs/Bsp/Inc/MPU6500.h
+blancecar\cartask.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\cartask.o: ../UserLibs/Controller/Inc/pid.h
+blancecar\cartask.o: ../UserLibs/Support/Inc/communication.h
+blancecar\cartask.o: ../Core/Inc/usart.h
+blancecar\cartask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
+blancecar\cartask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
+blancecar\cartask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+blancecar\cartask.o: ../Core/Inc/FreeRTOSConfig.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+blancecar\cartask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+blancecar\cartask.o: ../UserLibs/Bsp/Inc/ssd1306.h
+blancecar\cartask.o: ../UserLibs/Bsp/Inc/ssd1306_conf.h
+blancecar\cartask.o: ../UserLibs/Bsp/Inc/ssd1306_fonts.h

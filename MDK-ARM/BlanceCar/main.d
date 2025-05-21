@@ -1,0 +1,70 @@
+blancecar\main.o: ../Core/Src/main.c
+blancecar\main.o: ../Core/Inc/main.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+blancecar\main.o: ../Core/Inc/stm32f4xx_hal_conf.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+blancecar\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+blancecar\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
+blancecar\main.o: ../Drivers/CMSIS/Include/core_cm4.h
+blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
+blancecar\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+blancecar\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+blancecar\main.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+blancecar\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+blancecar\main.o: ../Core/Inc/FreeRTOSConfig.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+blancecar\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+blancecar\main.o: ../Core/Inc/dma.h
+blancecar\main.o: ../Core/Inc/i2c.h
+blancecar\main.o: ../Core/Inc/tim.h
+blancecar\main.o: ../Core/Inc/usart.h
+blancecar\main.o: ../Core/Inc/gpio.h
+blancecar\main.o: ../UserLibs/Devices/Inc/motor.h
+blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\main.o: ../UserLibs/Devices/Inc/encoder.h
+blancecar\main.o: ../UserLibs/Bsp/Inc/ssd1306.h
+blancecar\main.o: ../UserLibs/Bsp/Inc/ssd1306_conf.h
+blancecar\main.o: ../UserLibs/Bsp/Inc/ssd1306_fonts.h
+blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\main.o: ../UserLibs/Support/Inc/delay.h
+blancecar\main.o: ../UserLibs/Bsp/Inc/MPU6500.h
+blancecar\main.o: ../UserLibs/Devices/Inc/imu.h
+blancecar\main.o: ../UserLibs/Devices/Inc/car.h
+blancecar\main.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\main.o: ../UserLibs/Controller/Inc/pid.h
+blancecar\main.o: ../UserLibs/Support/Inc/communication.h
+blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
+blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h

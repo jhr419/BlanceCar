@@ -1,0 +1,12 @@
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+blancecar\port.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\port.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\port.o: ../Core/Inc/FreeRTOSConfig.h
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
