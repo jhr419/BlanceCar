@@ -47,6 +47,7 @@ blancecar\oledtask.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\oledtask.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/oled.h
 blancecar\oledtask.o: ../UserLibs/Controller/Inc/pid.h
+blancecar\oledtask.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 blancecar\oledtask.o: ../Core/Inc/FreeRTOSConfig.h

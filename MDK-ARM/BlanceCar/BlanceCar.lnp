@@ -43,6 +43,7 @@
 "blancecar\encoder.o"
 "blancecar\imu.o"
 "blancecar\car.o"
+"blancecar\filter.o"
 "blancecar\pid.o"
 "blancecar\cartask.o"
 "blancecar\oledtask.o"

@@ -7,9 +7,15 @@
 #include "imu.h"
 #include "oled.h"
 #include "pid.h"
+#include "filter.h"
 
-#define MAX_OUT  150
-#define MAX_IOUT 80
+#define MECHANICAL_BALANCE_BIAS -3.0f
+
+#define A_MAX_OUT  30.0f
+#define A_MAX_IOUT 5.0f
+
+#define V_MAX_OUT  3000.0f
+#define V_MAX_IOUT 1500.0f
 
 typedef struct Car Car;
 

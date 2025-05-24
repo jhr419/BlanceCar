@@ -42,3 +42,4 @@ blancecar\encoder.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\encoder.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\encoder.o: ../UserLibs/Devices/Inc/oled.h
 blancecar\encoder.o: ../UserLibs/Controller/Inc/pid.h
+blancecar\encoder.o: ../UserLibs/Algorithm/Inc/filter.h

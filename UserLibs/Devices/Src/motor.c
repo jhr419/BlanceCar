@@ -38,5 +38,6 @@ void Move(Motor* self, uint8_t direction, uint16_t setRPM) {
 	self->direction = direction;
 	self->setRPM = setRPM;
 	
-	SetDuty(self, setRPM);
+//	SetDuty(self, setRPM);
+	__HAL_TIM_SET_COMPARE(self->Init.htim, self->Init.Channel, setRPM);
 }

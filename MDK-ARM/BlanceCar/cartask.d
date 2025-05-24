@@ -43,6 +43,7 @@ blancecar\cartask.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\cartask.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\cartask.o: ../UserLibs/Devices/Inc/oled.h
 blancecar\cartask.o: ../UserLibs/Controller/Inc/pid.h
+blancecar\cartask.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\cartask.o: ../UserLibs/Support/Inc/communication.h
 blancecar\cartask.o: ../Core/Inc/usart.h
 blancecar\cartask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h

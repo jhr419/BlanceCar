@@ -65,6 +65,7 @@ blancecar\main.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\main.o: ../UserLibs/Devices/Inc/car.h
 blancecar\main.o: ../UserLibs/Devices/Inc/oled.h
 blancecar\main.o: ../UserLibs/Controller/Inc/pid.h
+blancecar\main.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\main.o: ../UserLibs/Support/Inc/communication.h
 blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
 blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h

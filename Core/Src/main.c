@@ -118,7 +118,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	delay_init();
 	ssd1306_Init();
-//	result = MPU_6500_Init();
 	
 	car = newCar();
 	HAL_TIM_Base_Start_IT(&htim9);
@@ -141,14 +140,14 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 //		car.imu.Get_Data(&car.imu);
-		MPU6500_DMP_Get_Data(&pitch, &roll, &yaw);
+//		MPU6500_DMP_Get_Data(&pitch, &roll, &yaw);
 //		ssd1306_Printf(0,20,Font_7x10, White, "lrpm:%4f", roll);
 //		ssd1306_Printf(0,30,Font_7x10, White, "lrpm:%4d", car.encoder_l.rpm);
 //		
 //		ssd1306_UpdateScreen();
-		uart_printf(&huart2, "%f\n", 
-		roll);
-		HAL_Delay(10);
+//		uart_printf(&huart2, "%f\n", 
+//		roll);
+//		HAL_Delay(10);
 	}
   /* USER CODE END 3 */
 }
@@ -226,13 +225,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   {
     car.encoder_l.GetCount(&car.encoder_l);
 		car.encoder_r.GetCount(&car.encoder_r);
-//		uart_printf(&huart2, "%f, %f\n",
-//		car.encoder_l.rpm,
-//		car.imu.roll);
-//		car.imu.Get_Data(&car.imu);
-//		ssd1306_Printf(0,20,Font_7x10, White, "lrpm:%4f", car.imu.roll);
-//		
-//		ssd1306_UpdateScreen();
   }
   /* USER CODE END Callback 1 */
 }

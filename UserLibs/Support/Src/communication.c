@@ -5,6 +5,15 @@ uint8_t rx_data_buffer2[BUF_SIZE];
 uint8_t rx_data_buffer6[BUF_SIZE];
 uint8_t *rx_data_str;
 
+void uart_ReadMsg(){
+	
+}
+
+void uart_SendMsg(UART_HandleTypeDef *huart, uint8_t* msg){
+	uint8_t len = sizeof(msg);
+	HAL_UART_Transmit_IT(huart, msg, len);
+}
+
 void uart_printf(UART_HandleTypeDef *huart, const char *fmt, ...){
 	static uint8_t tx_buf[256] = {0};
 	static va_list ap;
