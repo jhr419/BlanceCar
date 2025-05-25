@@ -23,8 +23,8 @@ void StartCarTask(void const * argument){
 		
 		car.pid_r.set, 
 		car.pid_r.fdb,
-		car.pid_r.out,
-		car.pid_r.Iout
+		car.pid_l.set,
+		car.pid_l.fdb
 		);
 		
 		osDelay(1);

@@ -9,13 +9,13 @@
 #include "pid.h"
 #include "filter.h"
 
-#define MECHANICAL_BALANCE_BIAS -1.5f
+#define MECHANICAL_BALANCE_BIAS -3.3f
 
-#define V_MAX_OUT  100.0f
-#define V_MAX_IOUT 0.0f 
+#define V_MAX_OUT  33000.0f
+#define V_MAX_IOUT 6000.0f 
 
 #define A_MAX_OUT  33000.0f
-#define A_MAX_IOUT 12000.0f  
+#define A_MAX_IOUT 6000.0f  
                               
 
 typedef struct Car Car;

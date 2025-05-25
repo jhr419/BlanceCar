@@ -3,7 +3,7 @@
 <title>Static Call Graph - [BlanceCar\BlanceCar.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image BlanceCar\BlanceCar.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sun May 25 17:45:55 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sun May 25 18:40:33 2025
 <BR><P>
 <H3>Maximum Stack Usage =        952 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1906,8 +1906,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f401xe.o(RESET)
 </UL>
-<P><STRONG><a name="[c1]"></a>MotorPidCalc</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, car.o(i.MotorPidCalc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = MotorPidCalc
+<P><STRONG><a name="[c1]"></a>MotorPidCalc</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, car.o(i.MotorPidCalc))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MotorPidCalc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_calc
 </UL>
@@ -1938,7 +1938,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;newCar
 </UL>
 
-<P><STRONG><a name="[58]"></a>StartCarTask</STRONG> (Thumb, 178 bytes, Stack size 56 bytes, cartask.o(i.StartCarTask))
+<P><STRONG><a name="[58]"></a>StartCarTask</STRONG> (Thumb, 174 bytes, Stack size 56 bytes, cartask.o(i.StartCarTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208 + Unknown Stack Size
 <LI>Call Chain = StartCarTask &rArr; uart_printf &rArr; vsprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -2586,7 +2586,7 @@ Global Symbols
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mpu_load_firmware
 </UL>
 
-<P><STRONG><a name="[176]"></a>newCar</STRONG> (Thumb, 284 bytes, Stack size 512 bytes, car.o(i.newCar))
+<P><STRONG><a name="[176]"></a>newCar</STRONG> (Thumb, 280 bytes, Stack size 512 bytes, car.o(i.newCar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = newCar &rArr; newMotor &rArr; HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
