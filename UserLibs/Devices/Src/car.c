@@ -20,13 +20,13 @@
 #define PID_A_I	0.0f
 #define PID_A_D	10.0f
 
-#define PID_L_P	20.0f
-#define PID_L_I	0.0f  
-#define PID_L_D	0.0f  
+#define PID_L_P	2500.0f //2200.0f
+#define PID_L_I	50.0f   //50.0f  
+#define PID_L_D	10.0f   //10.0f  
 
-#define PID_R_P	20.0f
-#define PID_R_I	0.0f  
-#define PID_R_D	0.0f  
+#define PID_R_P	2500.0f //2200.0f
+#define PID_R_I	50.0f   //50.0f  
+#define PID_R_D	10.0f   //10.0f   
 
 Car car;
 
@@ -84,8 +84,8 @@ void MotorPidCalc(Car* self, int8_t setSpeed_l, int8_t setSpeed_r){
 	
 	PID_calc(&self->pid_a, self->imu.roll, MECHANICAL_BALANCE_BIAS);
 	
-	PID_calc(&self->pid_l, self->encoder_l.rpm, self->pid_a.out);
-	PID_calc(&self->pid_r, self->encoder_r.rpm, self->pid_a.out);
+	PID_calc(&self->pid_l, self->encoder_l.rpm, 0);
+	PID_calc(&self->pid_r, self->encoder_r.rpm, 0);
 }
 
 void CarMove(Car* self, int8_t setSpeed){
@@ -95,8 +95,8 @@ void CarMove(Car* self, int8_t setSpeed){
 	setSpeed = __fabs(setSpeed);
 	MotorPidCalc(self, setSpeed, setSpeed);
 	
-	set_rpm_l = self->pid_l.out;
-	set_rpm_r = self->pid_r.out;
+	set_rpm_l = self->pid_l.out + self->pid_a.out;
+	set_rpm_r = self->pid_r.out + self->pid_a.out;
 	
 	if(car.imu.roll > 80 || car.imu.roll < -80){
 		car.isBrake = 1;
