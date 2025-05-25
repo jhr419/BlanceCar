@@ -1316,6 +1316,11 @@
               <FileType>1</FileType>
               <FilePath>..\UserLibs\Controller\Src\pid.c</FilePath>
             </File>
+            <File>
+              <FileName>pid2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserLibs\Controller\Src\pid2.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

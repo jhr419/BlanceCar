@@ -45,6 +45,7 @@
 "blancecar\car.o"
 "blancecar\filter.o"
 "blancecar\pid.o"
+"blancecar\pid2.o"
 "blancecar\cartask.o"
 "blancecar\oledtask.o"
 "blancecar\communication.o"

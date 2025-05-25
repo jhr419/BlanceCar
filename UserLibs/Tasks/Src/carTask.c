@@ -27,6 +27,6 @@ void StartCarTask(void const * argument){
 		car.pid_r.Iout
 		);
 		
-		osDelay(10);
+		osDelay(1);
 	}
 }
