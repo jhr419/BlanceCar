@@ -20,12 +20,10 @@ uint16_t GetCount(Encoder* self){
 	self->last_count = self->count;
 	static uint16_t cnt=0;
 	cnt = (uint16_t)__HAL_TIM_GET_COUNTER(self->htim);
-	self->count = (cnt > 30000) ? (65536 - cnt) : cnt;
-	
+
 	__HAL_TIM_SetCounter(self->htim, 0);
 	
-	self->rpm = (float)self->count;
-//	self->rpm = self->count - self->last_count;
+	self->rpm = (float)((cnt > 30000) ? (cnt - 65536) : cnt);
 	return self->count;
 }
 

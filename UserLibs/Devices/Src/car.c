@@ -15,27 +15,23 @@
 
 #define ENCODER_L_TIM htim3
 #define ENCODER_R_TIM htim1
-
-#define PID_A_P 1.0f
-#define PID_A_I	0.7f
-#define PID_A_D	0.2f
-
-#define PID_L_P	120.0f  //100.0f
-#define PID_L_I	15.0f   //15.0f
-#define PID_L_D	0.0f    //0.0f
-#define PID_R_P	120.0f  //100.0f
-#define PID_R_I	15.0f   //15.0f
-#define PID_R_D	0.0f    //0.0f
+												//角度-速度串行
+#define PID_A_P 5000.0f  //200.0f
+#define PID_A_I	0.0f    //1.0f
+#define PID_A_D	0.0f    //0.0f
+                        
+#define PID_L_P	2200.0f //2200.0f
+#define PID_L_I	50.0f   //50.0f  
+#define PID_L_D	10.0f   //10.0f  
+                        
+#define PID_R_P	2200.0f //2200.0f
+#define PID_R_I	50.0f   //50.0f  
+#define PID_R_D	10.0f   //10.0f  
 
 Car car;
-MotorVoltageFilter f1;
-MotorVoltageFilter f2;
 
 Car newCar(void){
 	Car c;
-	
-	Filter_Init(&f1, 0);
-	Filter_Init(&f2, 0);
 	
 	Motor_InitTypeDef motor_l_Init = {
 		.htim 				= &MOTOR_TIM,
@@ -80,38 +76,43 @@ Car newCar(void){
 }
 
 void MotorPidCalc(Car* self, int8_t setSpeed_l, int8_t setSpeed_r){
+	static int8_t symbol=0;
 	PID_calc(&self->pid_a, self->imu.roll, MECHANICAL_BALANCE_BIAS);
-	Filter_Process(&f1, self->pid_a.out);
+	if(self->pid_a.error[0] > 0) symbol = 1;
+	else if (self->pid_a.error[0] < 0) symbol = -1;
 	if(__fabs(self->imu.roll - MECHANICAL_BALANCE_BIAS)<0.5){
-		PID_calc(&self->pid_l, (float)self->encoder_l.rpm, 2);
-		PID_calc(&self->pid_r, (float)self->encoder_r.rpm, 2);	
+		PID_calc(&self->pid_l, self->encoder_l.rpm, A_MAX_IOUT);
+		PID_calc(&self->pid_r, self->encoder_r.rpm, A_MAX_IOUT);	
 	}else
 	{
-//		PID_calc(&self->pid_l, (float)self->encoder_l.rpm, (uint8_t)__fabs(f1.filtered_value));
-//		PID_calc(&self->pid_r, (float)self->encoder_r.rpm, (uint8_t)__fabs(f1.filtered_value));
-		PID_calc(&self->pid_l, (float)self->encoder_l.rpm, (uint8_t)__fabs(self->pid_a.out));
-		PID_calc(&self->pid_r, (float)self->encoder_r.rpm, (uint8_t)__fabs(self->pid_a.out));
+//		PID_calc(&self->pid_l, self->encoder_l.rpm, 20); //测试速度环
+//		PID_calc(&self->pid_r, self->encoder_r.rpm, 20);
+		PID_calc(&self->pid_l, self->encoder_l.rpm, self->pid_a.out);
+		PID_calc(&self->pid_r, self->encoder_r.rpm, self->pid_a.out);
 	}
 }
 
 void CarMove(Car* self, int8_t setSpeed){
-	uint8_t dircation = (self->imu.roll > MECHANICAL_BALANCE_BIAS) ? BACKWARD : ((self->imu.roll < MECHANICAL_BALANCE_BIAS) ? FORWARD : 0);
-	uint16_t set_rpm_l;
-	uint16_t set_rpm_r;
+//	uint8_t dircation = (self->imu.roll > MECHANICAL_BALANCE_BIAS) ? BACKWARD : ((self->imu.roll < MECHANICAL_BALANCE_BIAS) ? FORWARD : 0);
+	float set_rpm_l;
+	float set_rpm_r;
+
 	setSpeed = __fabs(setSpeed);
 	MotorPidCalc(self, setSpeed, setSpeed);
 	
-	set_rpm_l = __fabs((uint16_t)self->pid_l.out);
-	set_rpm_r = __fabs((uint16_t)self->pid_r.out);
+//	set_rpm_l = self->pid_l.out;
+//	set_rpm_r = self->pid_r.out;
+	set_rpm_l = self->pid_a.out;
+	set_rpm_r = self->pid_a.out;
 	
 //	if(__fabs(self->imu.roll - 0.0)<0.5){
 //		set_rpm_l = 20;
 //		set_rpm_r = 20;
 //	}
 	if(car.imu.roll > 70 || car.imu.roll < -70){
-		dircation = BRAKE;
-	}
+		car.isBrake = 1;
+	}else car.isBrake = 0;
 	
-	self->motor_l.Move(&self->motor_l, dircation, set_rpm_l);
-	self->motor_r.Move(&self->motor_r, dircation, set_rpm_r);
+	self->motor_l.Move(&self->motor_l, car.isBrake, (int32_t)set_rpm_l);
+	self->motor_r.Move(&self->motor_r, car.isBrake, (int32_t)set_rpm_r);
 }

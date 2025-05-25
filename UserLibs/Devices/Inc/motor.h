@@ -8,6 +8,7 @@
 #define BRAKE		 0
 #define	FORWARD  1
 #define	BACKWARD 2
+#define FREE		 3
 
 #define MOTOR_MIN_RPM 0
 #define MOTOR_MAX_RPM 330
@@ -30,13 +31,13 @@ struct Motor {
 	//member variable
 	Motor_InitTypeDef Init;
 	uint8_t direction;
-	uint16_t setRPM;
+	float setRPM;
 
 	//member method
-	void (*Move)(Motor* self, uint8_t direction, uint16_t setRPM);
+	void (*Move)(Motor* self, uint8_t isBrake, int32_t setRPM);
 };
 
 Motor newMotor(Motor_InitTypeDef Init);
-void Move(Motor* self, uint8_t direction, uint16_t setRPM);
+void Move(Motor* self, uint8_t isBrake, int32_t setRPM);
 
 #endif

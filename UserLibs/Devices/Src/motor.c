@@ -23,21 +23,27 @@ void SetDuty(Motor* self, uint16_t rpm) {
 }
 
 
-void Move(Motor* self, uint8_t direction, uint16_t setRPM) {
-	if (direction == FORWARD) {
-		HAL_GPIO_WritePin(self->Init.IN1_GPIOx, self->Init.IN1_GPIO_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(self->Init.IN2_GPIOx, self->Init.IN2_GPIO_Pin, GPIO_PIN_RESET);
-	} else if (direction == BACKWARD) {
-		HAL_GPIO_WritePin(self->Init.IN1_GPIOx, self->Init.IN1_GPIO_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(self->Init.IN2_GPIOx, self->Init.IN2_GPIO_Pin, GPIO_PIN_SET);
-	} else if (direction == BRAKE) {
+void Move(Motor* self, uint8_t isBrake, int32_t setRPM) {
+	if (isBrake) {
 		HAL_GPIO_WritePin(self->Init.IN1_GPIOx, self->Init.IN1_GPIO_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(self->Init.IN2_GPIOx, self->Init.IN2_GPIO_Pin, GPIO_PIN_SET);
+		self->direction = BRAKE;
 	}
+	else if(!isBrake){
+		if (setRPM > 0) {
+			HAL_GPIO_WritePin(self->Init.IN1_GPIOx, self->Init.IN1_GPIO_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(self->Init.IN2_GPIOx, self->Init.IN2_GPIO_Pin, GPIO_PIN_RESET);
+			self->direction = FORWARD;
+		} else if (setRPM < 0) {
+			HAL_GPIO_WritePin(self->Init.IN1_GPIOx, self->Init.IN1_GPIO_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(self->Init.IN2_GPIOx, self->Init.IN2_GPIO_Pin, GPIO_PIN_SET);
+			self->direction = BACKWARD;
+		}	else if(setRPM == 0){
+			HAL_GPIO_WritePin(self->Init.IN1_GPIOx, self->Init.IN1_GPIO_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(self->Init.IN2_GPIOx, self->Init.IN2_GPIO_Pin, GPIO_PIN_RESET);
+	}
+	}
+	self->setRPM = (float)setRPM;
 	
-	self->direction = direction;
-	self->setRPM = setRPM;
-	
-//	SetDuty(self, setRPM);
-	__HAL_TIM_SET_COMPARE(self->Init.htim, self->Init.Channel, setRPM);
+	__HAL_TIM_SET_COMPARE(self->Init.htim, self->Init.Channel, __fabs(setRPM));
 }

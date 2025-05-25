@@ -62,3 +62,8 @@ blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.
 blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+blancecar\oledtask.o: ../UserLibs/Support/Inc/communication.h
+blancecar\oledtask.o: ../Core/Inc/usart.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h

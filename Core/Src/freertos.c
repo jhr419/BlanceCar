@@ -112,8 +112,8 @@ void MX_FREERTOS_Init(void) {
 	osThreadDef(carTask, StartCarTask, osPriorityNormal, 0, 256);
 	carTaskHandle = osThreadCreate(osThread(carTask), NULL);
   
-//	osThreadDef(oledTask, StartOledTask, osPriorityNormal, 0, 256);
-//	oledTaskHandle = osThreadCreate(osThread(oledTask), NULL);
+	osThreadDef(oledTask, StartOledTask, osPriorityNormal, 0, 256);
+	oledTaskHandle = osThreadCreate(osThread(oledTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
 }

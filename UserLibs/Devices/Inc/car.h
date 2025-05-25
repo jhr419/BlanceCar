@@ -9,17 +9,20 @@
 #include "pid.h"
 #include "filter.h"
 
-#define MECHANICAL_BALANCE_BIAS -3.0f
+#define MECHANICAL_BALANCE_BIAS -1.8f
 
-#define A_MAX_OUT  30.0f
-#define A_MAX_IOUT 5.0f
-
-#define V_MAX_OUT  3000.0f
-#define V_MAX_IOUT 1500.0f
+#define A_MAX_OUT  20000.0f			//25.0f
+#define A_MAX_IOUT 12000.0f       //5.0f
+                              
+#define V_MAX_OUT  30000.0f   //30000.0f
+#define V_MAX_IOUT 12000.0f   //12000.0f
 
 typedef struct Car Car;
 
 struct Car{
+	int8_t set_v;
+	uint8_t isBrake;
+	
 	Motor motor_l;
 	Motor motor_r;
 	Encoder encoder_l;
