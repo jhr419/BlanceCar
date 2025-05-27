@@ -50,6 +50,8 @@
 /* USER CODE BEGIN PD */
 
 extern Car car;
+extern uint8_t rx_data_buffer2[BUF_SIZE];
+extern uint8_t rx_data_buffer6[BUF_SIZE];
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -118,6 +120,10 @@ int main(void)
 	car = newCar();
 	HAL_TIM_Base_Start_IT(&htim9);
 	
+	__HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
+	__HAL_UART_ENABLE_IT(&huart6, UART_IT_IDLE);
+	HAL_UART_Receive_DMA(&huart2, rx_data_buffer2, BUF_SIZE);
+	HAL_UART_Receive_DMA(&huart6, rx_data_buffer6, BUF_SIZE);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
@@ -135,15 +141,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//		car.imu.Get_Data(&car.imu);
-//		MPU6500_DMP_Get_Data(&pitch, &roll, &yaw);
-//		ssd1306_Printf(0,20,Font_7x10, White, "lrpm:%4f", roll);
-//		ssd1306_Printf(0,30,Font_7x10, White, "lrpm:%4d", car.encoder_l.rpm);
-//		
-//		ssd1306_UpdateScreen();
-//		uart_printf(&huart2, "%f\n", 
-//		roll);
-//		HAL_Delay(10);
+
 	}
   /* USER CODE END 3 */
 }

@@ -136,7 +136,7 @@ void CarMove(Car* self, int8_t setSpeed){
 
 	// 如果倾角过大，进行刹车
 	// Brake if the tilt angle is too large
-	if (car.imu.roll > 80 || car.imu.roll < -80) {
+	if (car.imu.roll > 70 || car.imu.roll < -70) {
 		car.isBrake = 1;
 	} else {
 		car.isBrake = 0;

@@ -12,6 +12,15 @@
 #define huart_bt huart6
 #define BUF_SIZE 64
 
+#define MSG_HEADER 	 0xAA
+#define MSG_TAIL	 	 0xFF
+#define MSG_LEN			 3
+#define CMD_LEFT     0xC1
+#define CMD_RIGHT    0xC2
+#define CMD_FORWARD  0xC3
+#define CMD_BACKWARD 0xC4
+#define CMD_STOP     0xC5
+
 typedef union{
 	float data;
 	uint8_t bytes[4];
@@ -19,19 +28,7 @@ typedef union{
 
 typedef struct{
 	uint8_t header;
-	
-	fp32 pid_a_p;
-	fp32 pid_a_i;
-	fp32 pid_a_d;
-	
-	fp32 pid_l_p;
-	fp32 pid_l_i;
-	fp32 pid_l_d;
-	
-	fp32 pid_r_p;
-	fp32 pid_r_i;
-	fp32 pid_r_d;
-	
+	uint8_t cmd_id;
 	uint8_t tail;
 }prams_msg_t;
 

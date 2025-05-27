@@ -21,17 +21,26 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
 Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
-E:\WorkFiles\Code\MCU\MCUlearning\BlanceCar\MDK-ARM\BlanceCar.uvprojx
+E:\WorkFiles\Code\MCU\MCUlearning\MoM\BlanceCar\MDK-ARM\BlanceCar.uvprojx
 Project File Date:  05/27/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin'
 Build target 'BlanceCar'
-compiling calibrate_angle.c...
+compiling communication.c...
+compiling oledTask.c...
+../UserLibs/Tasks/Inc/carTask.h(9): warning:  #1-D: last line of file ends without a newline
+   
+..\UserLibs\Tasks\Src\oledTask.c: 1 warning, 0 errors
+compiling carTask.c...
+../UserLibs/Tasks/Inc/carTask.h(9): warning:  #1-D: last line of file ends without a newline
+   
+..\UserLibs\Tasks\Src\carTask.c: 1 warning, 0 errors
+compiling main.c...
 linking...
-Program Size: Code=39792 RO-data=4616 RW-data=232 ZI-data=20712  
+Program Size: Code=39796 RO-data=4620 RW-data=232 ZI-data=20712  
 FromELF: creating hex file...
-"BlanceCar\BlanceCar.axf" - 0 Error(s), 0 Warning(s).
+"BlanceCar\BlanceCar.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +64,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

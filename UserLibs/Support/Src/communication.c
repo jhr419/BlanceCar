@@ -9,8 +9,12 @@ void uart_SendMsg(UART_HandleTypeDef *huart, uint8_t* msg){
 	HAL_UART_Transmit_IT(huart, msg, len);
 }
 
-void uart_ReadMsg(){
+void uart_ReadMsg(uint8_t* msg){
 	
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+
 }
 
 void uart_printf(UART_HandleTypeDef *huart, const char *fmt, ...){
@@ -32,6 +36,8 @@ void UART_IdleCallback(UART_HandleTypeDef* huart){
 		HAL_UART_DMAStop(huart);
 		
 		uint16_t rx_len = huart->RxXferSize - huart->RxXferCount;
+//		uart_printf(&huart_pc, "PC msg return: %s\n",rx_data_buffer2);
+		memset(rx_data_buffer2,0,BUF_SIZE);
 		
 		HAL_UART_Receive_DMA(&huart_pc, rx_data_buffer2, BUF_SIZE);
 	}
@@ -39,6 +45,10 @@ void UART_IdleCallback(UART_HandleTypeDef* huart){
 		HAL_UART_DMAStop(huart);
 		
 		uint16_t rx_len = huart->RxXferSize - huart->RxXferCount;
+//		uart_printf(&huart_pc, "BT msg return: %s\n",rx_data_buffer6);
+		
+		
+		memset(rx_data_buffer6,0,BUF_SIZE);
 		
 		HAL_UART_Receive_DMA(&huart_bt, rx_data_buffer6, BUF_SIZE);
 	}
@@ -49,7 +59,7 @@ void USART2_IRQHandler(void){
 
 	if (__HAL_UART_GET_FLAG(&huart2, UART_FLAG_IDLE)){
     __HAL_UART_CLEAR_IDLEFLAG(&huart2);
-
+		
     UART_IdleCallback(&huart2);
   }
 }
