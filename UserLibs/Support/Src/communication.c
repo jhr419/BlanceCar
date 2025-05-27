@@ -3,15 +3,14 @@
 uint8_t tx_buffer[BUF_SIZE];
 uint8_t rx_data_buffer2[BUF_SIZE];
 uint8_t rx_data_buffer6[BUF_SIZE];
-uint8_t *rx_data_str;
-
-void uart_ReadMsg(){
-	
-}
 
 void uart_SendMsg(UART_HandleTypeDef *huart, uint8_t* msg){
 	uint8_t len = sizeof(msg);
 	HAL_UART_Transmit_IT(huart, msg, len);
+}
+
+void uart_ReadMsg(){
+	
 }
 
 void uart_printf(UART_HandleTypeDef *huart, const char *fmt, ...){
@@ -33,8 +32,6 @@ void UART_IdleCallback(UART_HandleTypeDef* huart){
 		HAL_UART_DMAStop(huart);
 		
 		uint16_t rx_len = huart->RxXferSize - huart->RxXferCount;
-		uart_printf(&huart_pc, "PC msg return: %s\n",rx_data_buffer2);
-		memset(rx_data_buffer2,0,BUF_SIZE);
 		
 		HAL_UART_Receive_DMA(&huart_pc, rx_data_buffer2, BUF_SIZE);
 	}
@@ -42,8 +39,6 @@ void UART_IdleCallback(UART_HandleTypeDef* huart){
 		HAL_UART_DMAStop(huart);
 		
 		uint16_t rx_len = huart->RxXferSize - huart->RxXferCount;
-		uart_printf(&huart_pc, "BT msg return: %s\n",rx_data_buffer6);
-		memset(rx_data_buffer6,0,BUF_SIZE);
 		
 		HAL_UART_Receive_DMA(&huart_bt, rx_data_buffer6, BUF_SIZE);
 	}

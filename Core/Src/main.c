@@ -48,10 +48,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-int8_t result=0;
-float pitch;
-float roll;
-float yaw;
+
 extern Car car;
 /* USER CODE END PD */
 
@@ -118,7 +115,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	delay_init();
 	ssd1306_Init();
-	
 	car = newCar();
 	HAL_TIM_Base_Start_IT(&htim9);
 	

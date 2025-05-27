@@ -10,6 +10,7 @@ void StartCarTask(void const * argument){
 	while(1){
 		car.imu.Get_Data(&car.imu);
 		car.CarMove(&car, 0);
+		
 //		uart_printf(&huart2, "%f,%f,%f\n",
 //		car.encoder_l.rpm,
 //		car.imu.roll,
