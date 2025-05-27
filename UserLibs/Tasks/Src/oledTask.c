@@ -14,6 +14,8 @@ void StartOledTask(void const * argument){
 	car.balance_bias = MECHANICAL_BALANCE_BIAS;
 	while(1){
 		car.balance_bias = update_balance_target(car.imu.ay);
+		ssd1306_Printf(0,0, Font_7x10, White, "car roll:%.3f", car.imu.roll);
+		ssd1306_UpdateScreen();
 		osDelay(5);
 	}
 }

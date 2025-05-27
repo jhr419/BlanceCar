@@ -39,3 +39,12 @@ blancecar\communication.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bi
 blancecar\communication.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
 blancecar\communication.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
 blancecar\communication.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\communication.o: ../UserLibs/Devices/Inc/car.h
+blancecar\communication.o: ../UserLibs/Devices/Inc/motor.h
+blancecar\communication.o: ../Core/Inc/tim.h
+blancecar\communication.o: ../UserLibs/Devices/Inc/encoder.h
+blancecar\communication.o: ../UserLibs/Devices/Inc/imu.h
+blancecar\communication.o: ../UserLibs/Bsp/Inc/MPU6500.h
+blancecar\communication.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\communication.o: ../UserLibs/Controller/Inc/pid.h
+blancecar\communication.o: ../UserLibs/Algorithm/Inc/filter.h

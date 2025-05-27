@@ -1,4 +1,7 @@
 #include "communication.h"
+#include "car.h"
+
+extern Car car;
 
 uint8_t tx_buffer[BUF_SIZE];
 uint8_t rx_data_buffer2[BUF_SIZE];
@@ -45,8 +48,8 @@ void UART_IdleCallback(UART_HandleTypeDef* huart){
 		HAL_UART_DMAStop(huart);
 		
 		uint16_t rx_len = huart->RxXferSize - huart->RxXferCount;
-//		uart_printf(&huart_pc, "BT msg return: %s\n",rx_data_buffer6);
-		
+
+		car.cmd = rx_data_buffer6[0];
 		
 		memset(rx_data_buffer6,0,BUF_SIZE);
 		

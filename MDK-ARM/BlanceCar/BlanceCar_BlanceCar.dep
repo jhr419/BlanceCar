@@ -63,11 +63,11 @@ I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\string.h)(0x588B83
 I (../UserLibs/Support/Inc/delay.h)(0x6835AEB8)
 I (../UserLibs/Bsp/Inc/MPU6500.h)(0x6835AEB8)
 I (../UserLibs/Devices/Inc/imu.h)(0x6835AEB8)
-I (../UserLibs/Devices/Inc/car.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/car.h)(0x6835C908)
 I (../UserLibs/Devices/Inc/oled.h)(0x6835AEB8)
 I (../UserLibs/Controller/Inc/pid.h)(0x6835AEB8)
 I (../UserLibs/Algorithm/Inc/filter.h)(0x6835AEB8)
-I (../UserLibs/Support/Inc/communication.h)(0x6835C13D)
+I (../UserLibs/Support/Inc/communication.h)(0x6835C7DE)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 F (../Core/Src/gpio.c)(0x6835AEB8)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\gpio.o --omf_browse blancecar\gpio.crf --depend blancecar\gpio.d)
@@ -1241,7 +1241,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x67C7A51D)
 I (../Core/Inc/tim.h)(0x6835AEB8)
-I (../UserLibs/Devices/Inc/car.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/car.h)(0x6835C908)
 I (../UserLibs/Devices/Inc/motor.h)(0x6835AEB8)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../UserLibs/Devices/Inc/imu.h)(0x6835AEB8)
@@ -1285,8 +1285,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x67C7A51D)
 I (../UserLibs/Bsp/Inc/MPU6500.h)(0x6835AEB8)
-F (..\UserLibs\Devices\Src\car.c)(0x6835B703)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\car.o --omf_browse blancecar\car.crf --depend blancecar\car.d)
-I (../UserLibs/Devices/Inc/car.h)(0x6835AEB8)
+F (..\UserLibs\Devices\Src\car.c)(0x6835CB01)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\car.o --omf_browse blancecar\car.crf --depend blancecar\car.d)
+I (../UserLibs/Devices/Inc/car.h)(0x6835C908)
 I (../Core/Inc/main.h)(0x6835AEB8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x67C7A51D)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6835AEB8)
@@ -1400,7 +1400,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x67C7A51D)
-I (../UserLibs/Devices/Inc/car.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/car.h)(0x6835C908)
 I (../UserLibs/Devices/Inc/motor.h)(0x6835AEB8)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/tim.h)(0x6835AEB8)
@@ -1515,7 +1515,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x67C7A51D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x67C7A51D)
-I (../UserLibs/Devices/Inc/car.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/car.h)(0x6835C908)
 I (../UserLibs/Devices/Inc/motor.h)(0x6835AEB8)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/tim.h)(0x6835AEB8)
@@ -1525,7 +1525,7 @@ I (../UserLibs/Bsp/Inc/MPU6500.h)(0x6835AEB8)
 I (../UserLibs/Devices/Inc/oled.h)(0x6835AEB8)
 I (../UserLibs/Controller/Inc/pid.h)(0x6835AEB8)
 I (../UserLibs/Algorithm/Inc/filter.h)(0x6835AEB8)
-I (../UserLibs/Support/Inc/communication.h)(0x6835C13D)
+I (../UserLibs/Support/Inc/communication.h)(0x6835C7DE)
 I (../Core/Inc/usart.h)(0x6835AEB8)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -1547,7 +1547,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x67C7A470
 I (../UserLibs/Bsp/Inc/ssd1306.h)(0x6835AEB8)
 I (../UserLibs/Bsp/Inc/ssd1306_conf.h)(0x6835AEB8)
 I (../UserLibs/Bsp/Inc/ssd1306_fonts.h)(0x6835AEB8)
-F (..\UserLibs\Tasks\Src\oledTask.c)(0x6835AEB8)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\oledtask.o --omf_browse blancecar\oledtask.crf --depend blancecar\oledtask.d)
+F (..\UserLibs\Tasks\Src\oledTask.c)(0x6835CB91)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\oledtask.o --omf_browse blancecar\oledtask.crf --depend blancecar\oledtask.d)
 I (../UserLibs/Tasks/Inc/oledTask.h)(0x6835AEB8)
 I (../Core/Inc/main.h)(0x6835AEB8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x67C7A51D)
@@ -1586,7 +1586,7 @@ I (../UserLibs/Bsp/Inc/ssd1306.h)(0x6835AEB8)
 I (../UserLibs/Bsp/Inc/ssd1306_conf.h)(0x6835AEB8)
 I (../UserLibs/Bsp/Inc/ssd1306_fonts.h)(0x6835AEB8)
 I (../UserLibs/Tasks/Inc/carTask.h)(0x6835AEB8)
-I (../UserLibs/Devices/Inc/car.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/car.h)(0x6835C908)
 I (../UserLibs/Devices/Inc/motor.h)(0x6835AEB8)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Core/Inc/tim.h)(0x6835AEB8)
@@ -1610,14 +1610,14 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x67C7A470)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x67C7A470)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x67C7A470)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x67C7A470)
-I (../UserLibs/Support/Inc/communication.h)(0x6835C13D)
+I (../UserLibs/Support/Inc/communication.h)(0x6835C7DE)
 I (../Core/Inc/usart.h)(0x6835AEB8)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdarg.h)(0x588B8344)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\string.h)(0x588B8344)
 I (../UserLibs/Algorithm/Inc/calibrate_angle.h)(0x6835AEB8)
-F (..\UserLibs\Support\Src\communication.c)(0x6835C14B)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\communication.o --omf_browse blancecar\communication.crf --depend blancecar\communication.d)
-I (../UserLibs/Support/Inc/communication.h)(0x6835C13D)
+F (..\UserLibs\Support\Src\communication.c)(0x6835C9DE)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\communication.o --omf_browse blancecar\communication.crf --depend blancecar\communication.d)
+I (../UserLibs/Support/Inc/communication.h)(0x6835C7DE)
 I (../Core/Inc/main.h)(0x6835AEB8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x67C7A51D)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6835AEB8)
@@ -1656,6 +1656,15 @@ I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdarg.h)(0x588B83
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\include\string.h)(0x588B8344)
+I (../UserLibs/Devices/Inc/car.h)(0x6835C908)
+I (../UserLibs/Devices/Inc/motor.h)(0x6835AEB8)
+I (../Core/Inc/tim.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/encoder.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/imu.h)(0x6835AEB8)
+I (../UserLibs/Bsp/Inc/MPU6500.h)(0x6835AEB8)
+I (../UserLibs/Devices/Inc/oled.h)(0x6835AEB8)
+I (../UserLibs/Controller/Inc/pid.h)(0x6835AEB8)
+I (../UserLibs/Algorithm/Inc/filter.h)(0x6835AEB8)
 F (..\UserLibs\Support\Src\delay.c)(0x6835AEB8)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../UserLibs/Devices/Inc -I ../UserLibs/Algorithm/Inc -I ../UserLibs/Applications/Inc -I ../UserLibs/Controller/Inc -I ../UserLibs/Support/Inc -I ../UserLibs/Bsp/Inc -I ../UserLibs/Tasks/Inc-I.\RTE\_BlanceCar-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"D:\engineering software\keil5\keil5 5.24\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xE -DUSE_HAL_DRIVER -DSTM32F401xE-o blancecar\delay.o --omf_browse blancecar\delay.crf --depend blancecar\delay.d)
 I (../Core/Inc/main.h)(0x6835AEB8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x67C7A51D)

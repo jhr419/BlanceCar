@@ -28,17 +28,16 @@ Project File Date:  05/27/2025
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin'
 Build target 'BlanceCar'
 compiling communication.c...
+compiling car.c...
+..\UserLibs\Devices\Src\car.c(119): warning:  #177-D: variable "roll_bias"  was declared but never referenced
+  	float roll_bias;
+..\UserLibs\Devices\Src\car.c: 1 warning, 0 errors
 compiling oledTask.c...
 ../UserLibs/Tasks/Inc/carTask.h(9): warning:  #1-D: last line of file ends without a newline
    
 ..\UserLibs\Tasks\Src\oledTask.c: 1 warning, 0 errors
-compiling carTask.c...
-../UserLibs/Tasks/Inc/carTask.h(9): warning:  #1-D: last line of file ends without a newline
-   
-..\UserLibs\Tasks\Src\carTask.c: 1 warning, 0 errors
-compiling main.c...
 linking...
-Program Size: Code=39796 RO-data=4620 RW-data=232 ZI-data=20712  
+Program Size: Code=40072 RO-data=6536 RW-data=224 ZI-data=20712  
 FromELF: creating hex file...
 "BlanceCar\BlanceCar.axf" - 0 Error(s), 2 Warning(s).
 
@@ -64,7 +63,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

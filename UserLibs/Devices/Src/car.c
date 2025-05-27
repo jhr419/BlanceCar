@@ -115,6 +115,22 @@ void MotorPidCalc(Car* self, int8_t setSpeed_l, int8_t setSpeed_r){
 	PID_calc(&self->pid_r, self->encoder_r.rpm, self->pid_a.out);
 }
 
+void CarDirection(uint8_t cmd){
+	float roll_bias;
+	switch(cmd){
+		case 0xC1:
+			break;
+		case 0xC2:
+			break;
+		case 0xC3:
+			break;
+		case 0xC4:
+			break;
+		default:
+			break;
+	}
+}
+
 // 小车移动控制函数
 // Car movement control function
 void CarMove(Car* self, int8_t setSpeed){

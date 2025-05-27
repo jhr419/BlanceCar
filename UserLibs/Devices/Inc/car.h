@@ -24,6 +24,7 @@ struct Car{
 	int8_t set_v;
 	uint8_t isBrake;
 	float balance_bias;
+	uint8_t cmd;
 	
 	Motor motor_l;
 	Motor motor_r;
