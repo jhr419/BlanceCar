@@ -106,7 +106,8 @@ Car newCar(void){
 void MotorPidCalc(Car* self, int8_t setSpeed_l, int8_t setSpeed_r){
 	// 计算平衡角度的 PID 输出
 	// Calculate angle balance PID output
-	PID_calc(&self->pid_a, self->imu.roll, MECHANICAL_BALANCE_BIAS);
+	PID_calc(&self->pid_a, ROUND3(self->imu.roll), ROUND3(car.balance_bias));
+//	PID_calc(&self->pid_a, ROUND3(self->imu.roll), ROUND3(MECHANICAL_BALANCE_BIAS));
 
 	// 使用角度 PID 输出作为速度 PID 的期望值
 	// Use angle PID output as the setpoint for speed PIDs
@@ -130,8 +131,8 @@ void CarMove(Car* self, int8_t setSpeed){
 
 	// 计算左右电机目标转速（角度 PID 输出 + 各自速度 PID 输出）
 	// Compute target RPMs for each motor
-	set_rpm_l = self->pid_l.out + self->pid_a.out;
-	set_rpm_r = self->pid_r.out + self->pid_a.out;
+	set_rpm_l = self->pid_a.out;
+	set_rpm_r = self->pid_a.out;
 
 	// 如果倾角过大，进行刹车
 	// Brake if the tilt angle is too large

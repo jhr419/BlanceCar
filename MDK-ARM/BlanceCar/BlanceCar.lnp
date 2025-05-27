@@ -44,6 +44,7 @@
 "blancecar\imu.o"
 "blancecar\car.o"
 "blancecar\filter.o"
+"blancecar\calibrate_angle.o"
 "blancecar\pid.o"
 "blancecar\pid2.o"
 "blancecar\cartask.o"

@@ -29,5 +29,7 @@ int Enable(Imu* self) {
 void Get_Data(Imu* self) {
 	// 调用 DMP（数字运动处理器）接口获取三轴姿态角数据
 	// Call the DMP interface to get pitch, roll, and yaw values
-	MPU6500_DMP_Get_Data(&(self->pitch), &(self->roll), &(self->yaw));
+	MPU6500_DMP_Get_Data(&(self->pitch), &(self->roll), &(self->yaw), 
+												&(self->ax), &(self->ay), &(self->az),
+												&(self->gyrox), &(self->gyroy), &(self->gyroz));
 }

@@ -67,3 +67,4 @@ blancecar\oledtask.o: ../Core/Inc/usart.h
 blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
 blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
 blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\oledtask.o: ../UserLibs/Algorithm/Inc/calibrate_angle.h

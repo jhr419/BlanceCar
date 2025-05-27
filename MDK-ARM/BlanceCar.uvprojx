@@ -1306,6 +1306,11 @@
               <FileType>1</FileType>
               <FilePath>..\UserLibs\Algorithm\Src\filter.c</FilePath>
             </File>
+            <File>
+              <FileName>calibrate_angle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserLibs\Algorithm\Src\calibrate_angle.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

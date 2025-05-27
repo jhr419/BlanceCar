@@ -125,7 +125,7 @@ int MPU_6500_Init(void){
 
 #define Q30 (1073741824.0f)
 
-int MPU6500_DMP_Get_Data(float *pitch, float *roll, float *yaw)
+int MPU6500_DMP_Get_Data(float *pitch, float *roll, float *yaw, float* ax, float* ay, float* az, float* gyrox, float* gyroy, float* gyroz)
 {
 	float q0=0.0f;
 	float q1=0.0f;
@@ -140,6 +140,8 @@ int MPU6500_DMP_Get_Data(float *pitch, float *roll, float *yaw)
 	unsigned char more;
 	dmp_read_fifo(gyro, accel, quat, &timestamp, &sensors, &more);
 	
+	
+	
 	if(sensors & INV_WXYZ_QUAT)
 	{
 		q0 = quat[0] / Q30;
@@ -150,6 +152,18 @@ int MPU6500_DMP_Get_Data(float *pitch, float *roll, float *yaw)
 		*pitch = asin(-2 * q1 * q3 +2 * q0*q2)*57.3;
 		*roll	 = atan2(2*q2*q3+2*q0*q1, -2*q1*q1-2*q2*q2+1)*57.3;
 		*yaw	 = atan2(2*(q1*q2+q0*q3), q0*q0+q1*q1 -q2*q2-q3*q3)*57.3;
+	}
+	if(sensors & INV_XYZ_ACCEL)
+	{
+		*ax = (float)accel[0]/ 16384.0f;
+		*ay = (float)accel[1]/ 16384.0f;
+		*az = (float)accel[2]/ 16384.0f;
+	}
+	if(sensors & INV_XYZ_GYRO)
+	{
+		*gyrox = (float)gyro[0]/ 131.0f;;
+		*gyroy = (float)gyro[1]/ 131.0f;;
+		*gyroy = (float)gyro[2]/ 131.0f;;
 	}
 	
 	return 0;

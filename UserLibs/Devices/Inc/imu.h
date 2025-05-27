@@ -12,6 +12,14 @@ struct Imu{
 	float roll;
 	float yaw;
 	
+	float ax;
+	float ay;
+	float az;
+	
+	float gyrox;
+	float gyroy;
+	float gyroz;
+	
 	int (*Enable)(Imu* self);
 	void (*Get_Data)(Imu* self);
 };

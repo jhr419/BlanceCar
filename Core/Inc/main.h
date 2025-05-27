@@ -46,7 +46,7 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+#define ROUND3(x)  (((int)((x) * 1000 + 0.5f)) / 1000.0f)
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
