@@ -1401,6 +1401,16 @@
               <FileType>1</FileType>
               <FilePath>..\UserLibs\Bsp\Src\ssd1306_tests.c</FilePath>
             </File>
+            <File>
+              <FileName>OLED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserLibs\Bsp\Src\OLED.c</FilePath>
+            </File>
+            <File>
+              <FileName>OLED_Data.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserLibs\Bsp\Src\OLED_Data.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

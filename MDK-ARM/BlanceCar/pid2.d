@@ -42,5 +42,6 @@ blancecar\pid2.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\pid2.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\pid2.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\pid2.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\pid2.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\pid2.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\pid2.o: ../UserLibs/Algorithm/Inc/filter.h

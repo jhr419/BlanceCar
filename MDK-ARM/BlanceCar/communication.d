@@ -46,5 +46,6 @@ blancecar\communication.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\communication.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\communication.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\communication.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\communication.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\communication.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\communication.o: ../UserLibs/Algorithm/Inc/filter.h

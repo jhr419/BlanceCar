@@ -64,6 +64,7 @@ blancecar\main.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\main.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\main.o: ../UserLibs/Devices/Inc/car.h
 blancecar\main.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\main.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\main.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\main.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\main.o: ../UserLibs/Support/Inc/communication.h

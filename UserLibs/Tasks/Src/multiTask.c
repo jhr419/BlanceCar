@@ -10,7 +10,8 @@ void StartMultiTask(void const * argument){
 	car.balance_bias = MECHANICAL_BALANCE_BIAS;
 	while(1){
 		HC_trig();
-
+	
+		
 		osDelay(10);
 	}
 }

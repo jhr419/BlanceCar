@@ -39,6 +39,7 @@
 #include "imu.h"
 #include "car.h"
 #include "communication.h"
+#include "OLED.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -117,13 +118,18 @@ int main(void)
   MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
   delay_init();
-  ssd1306_Init();
+	
+	OLED_Init();
+//  ssd1306_Init();
   
-  ssd1306_clear_color(Black);
-  ssd1306_Printf(0,0, Font_7x10, White, "start!!");
-  delay_ms(2000);
-  ssd1306_clear_color(Black);
+//  ssd1306_clear_color(Black);
+//  ssd1306_Printf(0,0, Font_7x10, White, "start!!");
+//  delay_ms(2000);
+//  ssd1306_clear_color(Black);
   
+	
+	
+	
   car = newCar();
   HAL_TIM_Base_Start_IT(&htim9);
   HAL_TIM_Base_Start_IT(&htim10);

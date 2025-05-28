@@ -41,5 +41,6 @@ blancecar\encoder.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\i
 blancecar\encoder.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\encoder.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\encoder.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\encoder.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\encoder.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\encoder.o: ../UserLibs/Algorithm/Inc/filter.h

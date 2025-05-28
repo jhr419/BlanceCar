@@ -11,6 +11,7 @@ void StartCarTask(void const * argument){
 		car.imu.Get_Data(&car.imu);
 		car.CarMove(&car, 0);
 
+		uart_printf(&huart_pc,"%f\n", car.imu.roll);
 		osDelay(5);
 	}
 }

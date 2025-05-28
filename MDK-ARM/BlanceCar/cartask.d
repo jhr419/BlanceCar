@@ -42,6 +42,7 @@ blancecar\cartask.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\cartask.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\cartask.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\cartask.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\cartask.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\cartask.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\cartask.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\cartask.o: ../UserLibs/Support/Inc/communication.h

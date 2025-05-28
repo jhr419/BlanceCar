@@ -79,8 +79,12 @@ void Error_Handler(void);
 #define EHCO_Pin GPIO_PIN_12
 #define EHCO_GPIO_Port GPIOB
 #define EHCO_EXTI_IRQn EXTI15_10_IRQn
+#define I2C3_SDA_Pin GPIO_PIN_6
+#define I2C3_SDA_GPIO_Port GPIOC
 #define AIN1_Pin GPIO_PIN_7
 #define AIN1_GPIO_Port GPIOC
+#define I2C3_SCL_Pin GPIO_PIN_8
+#define I2C3_SCL_GPIO_Port GPIOC
 #define E1A_Pin GPIO_PIN_8
 #define E1A_GPIO_Port GPIOA
 #define E1B_Pin GPIO_PIN_9

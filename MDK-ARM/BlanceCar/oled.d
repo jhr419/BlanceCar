@@ -1,5 +1,4 @@
-blancecar\oled.o: ..\UserLibs\Devices\Src\oled.c
-blancecar\oled.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\oled.o: ..\UserLibs\Bsp\Src\OLED.c
 blancecar\oled.o: ../Core/Inc/main.h
 blancecar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 blancecar\oled.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -34,3 +33,9 @@ blancecar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 blancecar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 blancecar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 blancecar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+blancecar\oled.o: ../UserLibs/Devices/Inc/OLED.h
+blancecar\oled.o: ../UserLibs/Bsp/Inc/OLED_Data.h
+blancecar\oled.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\oled.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\math.h
+blancecar\oled.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\oled.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h

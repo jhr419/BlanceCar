@@ -42,5 +42,6 @@ blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\calibrate_angle.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\calibrate_angle.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\calibrate_angle.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\calibrate_angle.o: ../UserLibs/Algorithm/Inc/filter.h

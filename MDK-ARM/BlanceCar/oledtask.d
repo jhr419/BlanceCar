@@ -34,9 +34,8 @@ blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-blancecar\oledtask.o: ../UserLibs/Bsp/Inc/ssd1306.h
-blancecar\oledtask.o: ../UserLibs/Bsp/Inc/ssd1306_conf.h
-blancecar\oledtask.o: ../UserLibs/Bsp/Inc/ssd1306_fonts.h
+blancecar\oledtask.o: ../UserLibs/Devices/Inc/OLED.h
+blancecar\oledtask.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\oledtask.o: ../UserLibs/Tasks/Inc/carTask.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/car.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/motor.h
@@ -45,7 +44,6 @@ blancecar\oledtask.o: ../Core/Inc/tim.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\oledtask.o: ../UserLibs/Bsp/Inc/MPU6500.h
-blancecar\oledtask.o: ../UserLibs/Devices/Inc/oled.h
 blancecar\oledtask.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\oledtask.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h

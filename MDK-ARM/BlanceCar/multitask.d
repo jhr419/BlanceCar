@@ -56,6 +56,7 @@ blancecar\multitask.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\multitask.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\multitask.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\multitask.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\multitask.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\multitask.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\multitask.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\multitask.o: ../UserLibs/Algorithm/Inc/calibrate_angle.h

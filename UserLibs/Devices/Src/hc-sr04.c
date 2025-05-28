@@ -37,7 +37,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
             }
             captureFlag = 1;  // 标记新数据可用
 						dis = calc_dis();
-						uart_printf(&huart_pc,"%f\n",dis);
         }
     }
 }
