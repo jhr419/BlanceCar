@@ -1,9 +1,9 @@
 blancecar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
-blancecar\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-blancecar\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+blancecar\queue.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
+blancecar\queue.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
 blancecar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-blancecar\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\queue.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\queue.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\queue.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\queue.o: ../Core/Inc/FreeRTOSConfig.h
 blancecar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 blancecar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

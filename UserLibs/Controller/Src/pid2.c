@@ -1,13 +1,13 @@
 #include "pid2.h"
 #include "car.h"
 
-#define V_Kp -0.55f
+#define V_Kp -0.6f
 
 float Med_Angle=MECHANICAL_BALANCE_BIAS;      // 机械中值，能使得小车真正平衡住的角度 
 float Target_Speed=0;	  // 期望速度。---二次开发接口，用于控制小车前进后退及其速度。
 float 
   Vertical_Kp = 5000.0f * 0.6,//5000.0f,
-  Vertical_Kd = 850.0f * 0.6;//190.0f;      // 直立环Kp、Kd
+  Vertical_Kd = 1100.0f * 0.6;//190.0f;      // 直立环Kp、Kd
 float 
   Velocity_Kp= V_Kp,
   Velocity_Ki= V_Kp/200.0f;   // 速度环Kp、Ki（正反馈）

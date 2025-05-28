@@ -8,7 +8,7 @@ blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 blancecar\oledtask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 blancecar\oledtask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
 blancecar\oledtask.o: ../Drivers/CMSIS/Include/core_cm4.h
-blancecar\oledtask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\oledtask.o: ../Drivers/CMSIS/Include/cmsis_version.h
 blancecar\oledtask.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 blancecar\oledtask.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@ blancecar\oledtask.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 blancecar\oledtask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-blancecar\oledtask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 blancecar\oledtask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -40,7 +40,7 @@ blancecar\oledtask.o: ../UserLibs/Bsp/Inc/ssd1306_fonts.h
 blancecar\oledtask.o: ../UserLibs/Tasks/Inc/carTask.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/car.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/motor.h
-blancecar\oledtask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
 blancecar\oledtask.o: ../Core/Inc/tim.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\oledtask.o: ../UserLibs/Devices/Inc/imu.h
@@ -64,7 +64,7 @@ blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.
 blancecar\oledtask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 blancecar\oledtask.o: ../UserLibs/Support/Inc/communication.h
 blancecar\oledtask.o: ../Core/Inc/usart.h
-blancecar\oledtask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
-blancecar\oledtask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-blancecar\oledtask.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
+blancecar\oledtask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
 blancecar\oledtask.o: ../UserLibs/Algorithm/Inc/calibrate_angle.h

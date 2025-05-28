@@ -39,6 +39,7 @@
 Car car;
 
 int Vertical_out,Velocity_out,Turn_out; // 直立环&速度环&转向环的输出变量
+int RUNNING = 0;
 int PWM_out;
 int PWM_MAX=30000,PWM_MIN=-30000;	// PWM限幅变量
 int MOTO1,MOTO2;
@@ -110,15 +111,39 @@ Car newCar(void){
 
 int MotorPidCalc(){
 	int PWM_out;
-
-	if(car.cmd == CMD_STOP) 	car.target_speed = 0;
-	if(car.cmd == CMD_FORWARD)  car.target_speed = 10;
-	if(car.cmd == CMD_BACKWARD) car.target_speed = -10;
-	car.target_speed = CLAMP(car.target_speed, -15, 15);
+	if(car.cmd == CMD_STOP) 		{car.target_speed = 0; RUNNING = 0;}
+	if(car.cmd == CMD_STOP_SLOWLY)	{
+		if(car.target_speed >= 4)	car.target_speed = car.target_speed * 0.5;
+		else	car.cmd = CMD_STOP;
+	}
+	if(car.cmd == CMD_FORWARD)  	{
+		if(RUNNING != 1)			{car.target_speed = 10;	RUNNING = 1;}
+		else	RUNNING = 1;
+	}
+	if(car.cmd == CMD_BACKWARD) 	{
+		if(RUNNING != 2)			{car.target_speed = -10; RUNNING = 2;}
+		else	RUNNING = 2;
+	}
+	if(car.cmd == CMD_SPEED_UP)		{
+		if(RUNNING == 1) car.target_speed += 1;
+		if(RUNNING == 2) car.target_speed -= 1;
+	}
+	if(car.cmd == CMD_SPEED_DOWN)	{
+		if(RUNNING == 1) car.target_speed -= 1;
+		if(RUNNING == 2) car.target_speed += 1;
+	}
+	car.target_speed = CLAMP(car.target_speed, -16,16 );
 	
 	if(car.cmd == CMD_STOP) 		car.target_turn = 0;
-	if(car.cmd == CMD_LEFT)			car.target_turn = 3000;
-	if(car.cmd == CMD_RIGHT)		car.target_turn = -3000;
+	if(car.cmd == CMD_STOP_SLOWLY)	car.target_turn = 0;
+	if(car.cmd == CMD_LEFT)			car.target_turn = -3000;
+	if(car.cmd == CMD_RIGHT)		car.target_turn = 3000;
+	if(car.cmd == CMD_TURN_AROUND)	{
+		if(car.target_speed == 0) car.target_speed = 0;
+		else car.target_turn = 5000;
+	}
+	if(car.cmd == CMD_CLEAR)		
+	
 	car.target_turn = CLAMP(car.target_turn, -5000, 5000);
 	    
 //	uart_printf(&huart_bt, "%d, %d", car.target_speed, car.target_turn);
@@ -137,7 +162,6 @@ void CarDirection(uint8_t cmd){
 	float roll_bias;
 	switch(cmd){
 		case 0xC1:
-			
 			break;
 		case 0xC2:
 			break;
@@ -167,7 +191,7 @@ void CarMove(Car* self, int8_t setSpeed){
 	
 	// 如果倾角过大，进行刹车
 	// Brake if the tilt angle is too large
-	if (car.imu.roll > 70 || car.imu.roll < -70) {
+	if (car.imu.roll > 60 || car.imu.roll < -60) {
 		car.isBrake = 1;
 	} else {
 		car.isBrake = 0;

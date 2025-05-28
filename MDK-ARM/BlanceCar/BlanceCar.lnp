@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp.sp
+--cpu=Cortex-M4.fp
 "blancecar\startup_stm32f401xe.o"
 "blancecar\main.o"
 "blancecar\gpio.o"
@@ -43,6 +43,7 @@
 "blancecar\encoder.o"
 "blancecar\imu.o"
 "blancecar\car.o"
+"blancecar\hc-sr04.o"
 "blancecar\filter.o"
 "blancecar\calibrate_angle.o"
 "blancecar\pid.o"
