@@ -13,8 +13,8 @@
 #define BUF_SIZE 64
 
 #define MSG_HEADER 	 0xAA
-#define MSG_TAIL	 	 0xFF
-#define MSG_LEN			 3
+#define MSG_TAIL	 0xFF
+#define MSG_LEN		 3
 #define CMD_LEFT     0xC1
 #define CMD_RIGHT    0xC2
 #define CMD_FORWARD  0xC3

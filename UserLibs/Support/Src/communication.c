@@ -50,7 +50,7 @@ void UART_IdleCallback(UART_HandleTypeDef* huart){
 		uint16_t rx_len = huart->RxXferSize - huart->RxXferCount;
 
 		car.cmd = rx_data_buffer6[0];
-		
+		uart_printf(&huart_pc,"%d", car.cmd);
 		memset(rx_data_buffer6,0,BUF_SIZE);
 		
 		HAL_UART_Receive_DMA(&huart_bt, rx_data_buffer6, BUF_SIZE);

@@ -11,11 +11,12 @@ uint16_t encoder_count1;
 uint16_t encoder_count2;
 
 void StartOledTask(void const * argument){
-	car.balance_bias = MECHANICAL_BALANCE_BIAS;
 	while(1){
-		car.balance_bias = update_balance_target(car.imu.ay);
-		ssd1306_Printf(0,0, Font_7x10, White, "car roll:%.3f", car.imu.roll);
-		ssd1306_UpdateScreen();
-		osDelay(5);
+//		ssd1306_Printf(0,0, Font_7x10, White, "car roll:%.3f     ", car.imu.roll);
+//////		ssd1306_Printf(0,10, Font_7x10, White, "balance roll:%.3f     ", car.balance_bias);
+//////		ssd1306_Printf(0,20, Font_7x10, White, "gyro:%.3f     ", car.imu.gyroy);
+//		ssd1306_UpdateScreen();
+		
+		osDelay(10);
 	}
 }

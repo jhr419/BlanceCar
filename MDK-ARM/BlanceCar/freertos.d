@@ -1,7 +1,7 @@
 blancecar\freertos.o: ../Core/Src/freertos.c
 blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-blancecar\freertos.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\freertos.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\freertos.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\freertos.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -49,3 +49,4 @@ blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.
 blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 blancecar\freertos.o: ../UserLibs/Tasks/Inc/carTask.h
 blancecar\freertos.o: ../UserLibs/Tasks/Inc/oledTask.h
+blancecar\freertos.o: ../UserLibs/Tasks/Inc/multiTask.h

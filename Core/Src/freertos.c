@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "carTask.h"
 #include "oledTask.h"
+#include "multiTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +49,7 @@
 /* USER CODE BEGIN Variables */
 osThreadId carTaskHandle;
 osThreadId oledTaskHandle;
+osThreadId multiTaskHandle;
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 
@@ -109,11 +111,15 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-	osThreadDef(carTask, StartCarTask, osPriorityNormal, 0, 256);
+	osThreadDef(carTask, StartCarTask, osPriorityRealtime, 0, 256);
 	carTaskHandle = osThreadCreate(osThread(carTask), NULL);
   
 	osThreadDef(oledTask, StartOledTask, osPriorityNormal, 0, 256);
 	oledTaskHandle = osThreadCreate(osThread(oledTask), NULL);
+	
+	osThreadDef(multiTask, StartMultiTask, osPriorityNormal, 0, 256);
+	multiTaskHandle = osThreadCreate(osThread(multiTask), NULL);
+	
   /* USER CODE END RTOS_THREADS */
 
 }

@@ -3,6 +3,6 @@
 
 #include "main.h"
 
-float update_balance_target(float acc_x);
+float update_balance_target(float speed_l, float speed_r);
 
 #endif

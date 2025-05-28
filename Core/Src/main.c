@@ -115,15 +115,21 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
-	delay_init();
-	ssd1306_Init();
-	car = newCar();
-	HAL_TIM_Base_Start_IT(&htim9);
-	
-	__HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
-	__HAL_UART_ENABLE_IT(&huart6, UART_IT_IDLE);
-	HAL_UART_Receive_DMA(&huart2, rx_data_buffer2, BUF_SIZE);
-	HAL_UART_Receive_DMA(&huart6, rx_data_buffer6, BUF_SIZE);
+  delay_init();
+  ssd1306_Init();
+  
+  ssd1306_clear_color(Black);
+  ssd1306_Printf(0,0, Font_7x10, White, "start!!");
+  HAL_Delay(200);
+  ssd1306_clear_color(Black);
+  
+  car = newCar();
+  HAL_TIM_Base_Start_IT(&htim9);
+  
+  __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
+  __HAL_UART_ENABLE_IT(&huart6, UART_IT_IDLE);
+  HAL_UART_Receive_DMA(&huart2, rx_data_buffer2, BUF_SIZE);
+  HAL_UART_Receive_DMA(&huart6, rx_data_buffer6, BUF_SIZE);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
@@ -218,7 +224,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	else if (htim == &htim9) //计算转速10ms
   {
     car.encoder_l.GetCount(&car.encoder_l);
-		car.encoder_r.GetCount(&car.encoder_r);
+    car.encoder_r.GetCount(&car.encoder_r);
   }
   /* USER CODE END Callback 1 */
 }

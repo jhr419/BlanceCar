@@ -7,7 +7,7 @@ blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 blancecar\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 blancecar\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
 blancecar\main.o: ../Drivers/CMSIS/Include/core_cm4.h
-blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
 blancecar\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 blancecar\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -15,7 +15,7 @@ blancecar\main.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 blancecar\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 blancecar\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -53,12 +53,12 @@ blancecar\main.o: ../Core/Inc/tim.h
 blancecar\main.o: ../Core/Inc/usart.h
 blancecar\main.o: ../Core/Inc/gpio.h
 blancecar\main.o: ../UserLibs/Devices/Inc/motor.h
-blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 blancecar\main.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\main.o: ../UserLibs/Bsp/Inc/ssd1306.h
 blancecar\main.o: ../UserLibs/Bsp/Inc/ssd1306_conf.h
 blancecar\main.o: ../UserLibs/Bsp/Inc/ssd1306_fonts.h
-blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 blancecar\main.o: ../UserLibs/Support/Inc/delay.h
 blancecar\main.o: ../UserLibs/Bsp/Inc/MPU6500.h
 blancecar\main.o: ../UserLibs/Devices/Inc/imu.h
@@ -67,5 +67,5 @@ blancecar\main.o: ../UserLibs/Devices/Inc/oled.h
 blancecar\main.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\main.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\main.o: ../UserLibs/Support/Inc/communication.h
-blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
-blancecar\main.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
+blancecar\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+blancecar\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h

@@ -1,8 +1,8 @@
 blancecar\ssd1306_fonts.o: ..\UserLibs\Bsp\Src\ssd1306_fonts.c
 blancecar\ssd1306_fonts.o: ../UserLibs/Bsp/Inc/ssd1306_fonts.h
 blancecar\ssd1306_fonts.o: ../UserLibs/Bsp/Inc/ssd1306.h
-blancecar\ssd1306_fonts.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\ssd1306_fonts.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\ssd1306_fonts.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\ssd1306_fonts.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\ssd1306_fonts.o: ../UserLibs/Bsp/Inc/ssd1306_conf.h
 blancecar\ssd1306_fonts.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 blancecar\ssd1306_fonts.o: ../Core/Inc/stm32f4xx_hal_conf.h

@@ -1,4 +1,6 @@
 #include "car.h"
+#include "pid2.h"
+#include "communication.h"
 
 // 定义左/右电机和编码器相关的硬件配置（定时器、GPIO端口与引脚）
 // Define hardware configuration for left/right motors and encoders
@@ -20,9 +22,9 @@
 
 // 定义平衡角度 PID 和速度 PID 的参数
 // Define PID parameters for angle and velocity control
-#define PID_A_P 3400.0f
+#define PID_A_P 3000.0f//2800.0f
 #define PID_A_I	0.0f
-#define PID_A_D	10.0f
+#define PID_A_D	0.0f //1200.0f
 
 #define PID_L_P	2800.0f
 #define PID_L_I	50.0f
@@ -35,6 +37,11 @@
 // 定义全局小车对象
 // Global car instance
 Car car;
+
+int Vertical_out,Velocity_out,Turn_out; // 直立环&速度环&转向环的输出变量
+int PWM_out;
+int PWM_MAX=30000,PWM_MIN=-30000;	// PWM限幅变量
+int MOTO1,MOTO2;
 
 // 创建小车对象，初始化电机、编码器、IMU 和 PID 控制器
 // Create a car instance and initialize motors, encoders, IMU, and PID controllers
@@ -101,24 +108,36 @@ Car newCar(void){
 	return c;
 }
 
-// PID 计算：角度 PID -> 速度 PID（左/右）
-// PID calculation: Angle PID -> Velocity PIDs (left/right)
-void MotorPidCalc(Car* self, int8_t setSpeed_l, int8_t setSpeed_r){
-	// 计算平衡角度的 PID 输出
-	// Calculate angle balance PID output
-	PID_calc(&self->pid_a, ROUND3(self->imu.roll), ROUND3(car.balance_bias));
-//	PID_calc(&self->pid_a, ROUND3(self->imu.roll), ROUND3(MECHANICAL_BALANCE_BIAS));
+int MotorPidCalc(){
+	int PWM_out;
 
-	// 使用角度 PID 输出作为速度 PID 的期望值
-	// Use angle PID output as the setpoint for speed PIDs
-	PID_calc(&self->pid_l, self->encoder_l.rpm, self->pid_a.out);
-	PID_calc(&self->pid_r, self->encoder_r.rpm, self->pid_a.out);
+	if(car.cmd == CMD_STOP) 	car.target_speed = 0;
+	if(car.cmd == CMD_FORWARD)  car.target_speed = 10;
+	if(car.cmd == CMD_BACKWARD) car.target_speed = -10;
+	car.target_speed = CLAMP(car.target_speed, -15, 15);
+	
+	if(car.cmd == CMD_STOP) 		car.target_turn = 0;
+	if(car.cmd == CMD_LEFT)			car.target_turn = 3000;
+	if(car.cmd == CMD_RIGHT)		car.target_turn = -3000;
+	car.target_turn = CLAMP(car.target_turn, -5000, 5000);
+	    
+//	uart_printf(&huart_bt, "%d, %d", car.target_speed, car.target_turn);
+  /*转向约束*/
+//  if((Left==0)&&(Right==0))Turn_Kd=-0.6;    // 若无左右转向指令，则开启转向约束
+//  else if((Left==1)||(Right==1))Turn_Kd=0;  // 若左右转向指令接收到，则去掉转向约束
+     
+	Velocity_out = Velocity(car.target_speed,car.encoder_l.rpm,car.encoder_r.rpm);
+	Vertical_out = Vertical(Velocity_out + MECHANICAL_BALANCE_BIAS, car.imu.roll, car.imu.gyrox);
+	Turn_out=Turn(car.target_turn);
+	PWM_out = Vertical_out;
+	return PWM_out;
 }
 
 void CarDirection(uint8_t cmd){
 	float roll_bias;
 	switch(cmd){
 		case 0xC1:
+			
 			break;
 		case 0xC2:
 			break;
@@ -131,25 +150,21 @@ void CarDirection(uint8_t cmd){
 	}
 }
 
+void Limit(int *motoA,int *motoB)
+{
+	if(*motoA>PWM_MAX)*motoA=PWM_MAX;
+	if(*motoA<PWM_MIN)*motoA=PWM_MIN;
+	
+	if(*motoB>PWM_MAX)*motoB=PWM_MAX;
+	if(*motoB<PWM_MIN)*motoB=PWM_MIN;
+}
+
 // 小车移动控制函数
 // Car movement control function
 void CarMove(Car* self, int8_t setSpeed){
-	float set_rpm_l;
-	float set_rpm_r;
-
-	// 获取绝对速度值
-	// Take absolute value of set speed
-	setSpeed = __fabs(setSpeed);
-
-	// 进行 PID 计算
-	// Perform PID calculation
-	MotorPidCalc(self, setSpeed, setSpeed);
-
-	// 计算左右电机目标转速（角度 PID 输出 + 各自速度 PID 输出）
-	// Compute target RPMs for each motor
-	set_rpm_l = self->pid_a.out;
-	set_rpm_r = self->pid_a.out;
-
+	PWM_out=MotorPidCalc();
+//	Turn_out=Turn();
+	
 	// 如果倾角过大，进行刹车
 	// Brake if the tilt angle is too large
 	if (car.imu.roll > 70 || car.imu.roll < -70) {
@@ -157,9 +172,18 @@ void CarMove(Car* self, int8_t setSpeed){
 	} else {
 		car.isBrake = 0;
 	}
-
-	// 控制左右电机运行
-	// Drive left and right motors
-	self->motor_l.Move(&self->motor_l, car.isBrake, (int32_t)set_rpm_l);
-	self->motor_r.Move(&self->motor_r, car.isBrake, (int32_t)set_rpm_r);
+	
+	MOTO1 = PWM_out-Turn_out; // 左电机
+	MOTO2 = PWM_out+0.8*Turn_out; // 右电机
+	
+  Limit(&MOTO1,&MOTO2);     // PWM限幅
+	
+//	uart_printf(&huart_bt, "%f, %f, %f, %f\n", 				
+//		car.encoder_l.rpm, car.encoder_r.rpm, car.imu.roll, car.imu.gyrox
+//		);
+//	uart_printf(&huart_pc, "%f, %f, %f, %f\n", 				
+//		car.encoder_l.rpm, car.encoder_r.rpm, car.imu.roll, car.imu.gyrox
+//		);
+  self->motor_l.Move(&self->motor_l, car.isBrake, MOTO1);
+	self->motor_r.Move(&self->motor_r, car.isBrake, MOTO2);
 }

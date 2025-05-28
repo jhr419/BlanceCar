@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "blancecar\startup_stm32f401xe.o"
 "blancecar\main.o"
 "blancecar\gpio.o"
@@ -49,6 +49,7 @@
 "blancecar\pid2.o"
 "blancecar\cartask.o"
 "blancecar\oledtask.o"
+"blancecar\multitask.o"
 "blancecar\communication.o"
 "blancecar\delay.o"
 "blancecar\inv_mpu.o"

@@ -11,16 +11,15 @@ void StartCarTask(void const * argument){
 		car.imu.Get_Data(&car.imu);
 		car.CarMove(&car, 0);
 		
-//		uart_printf(&huart6, "%f, %f, %f, %f, %f, %f\n", 				
-//		car.imu.roll,
-//		car.balance_bias,
+//		uart_printf(&huart_pc, "%f, %f, %f, %f, %f, %f\n", 				
+//		car.pid_a.set,
+//		car.pid_a.fdb,
+//		car.pid_a.out,
 //		car.imu.gyrox,
-//		
-//		car.imu.ax,
-//		car.imu.ay,
-//		car.imu.az
+//		car.imu.gyroy,
+//		car.imu.gyroz
 //		);
 		
-		osDelay(1);
+		osDelay(5);
 	}
 }

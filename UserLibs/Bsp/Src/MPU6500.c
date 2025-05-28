@@ -161,9 +161,9 @@ int MPU6500_DMP_Get_Data(float *pitch, float *roll, float *yaw, float* ax, float
 	}
 	if(sensors & INV_XYZ_GYRO)
 	{
-		*gyrox = (float)gyro[0]/ 131.0f;;
-		*gyroy = (float)gyro[1]/ 131.0f;;
-		*gyroy = (float)gyro[2]/ 131.0f;;
+		*gyrox = (float)gyro[0] / 65.5f;;
+		*gyroy = (float)gyro[1] / 65.5f;;
+		*gyroy = (float)gyro[2] / 65.5f;;
 	}
 	
 	return 0;

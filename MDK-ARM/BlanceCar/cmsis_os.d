@@ -1,9 +1,9 @@
 blancecar\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-blancecar\cmsis_os.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\cmsis_os.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 blancecar\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 blancecar\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-blancecar\cmsis_os.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\cmsis_os.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\cmsis_os.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\cmsis_os.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\cmsis_os.o: ../Core/Inc/FreeRTOSConfig.h
 blancecar\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 blancecar\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

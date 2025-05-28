@@ -1,7 +1,7 @@
 blancecar\ssd1306.o: ..\UserLibs\Bsp\Src\ssd1306.c
 blancecar\ssd1306.o: ../UserLibs/Bsp/Inc/ssd1306.h
-blancecar\ssd1306.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\ssd1306.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\ssd1306.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\ssd1306.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\ssd1306.o: ../UserLibs/Bsp/Inc/ssd1306_conf.h
 blancecar\ssd1306.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 blancecar\ssd1306.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -34,10 +34,10 @@ blancecar\ssd1306.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 blancecar\ssd1306.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 blancecar\ssd1306.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 blancecar\ssd1306.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-blancecar\ssd1306.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\math.h
-blancecar\ssd1306.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
-blancecar\ssd1306.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\string.h
+blancecar\ssd1306.o: D:\keil5\ARM\ARMCC\Bin\..\include\math.h
+blancecar\ssd1306.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+blancecar\ssd1306.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
 blancecar\ssd1306.o: ../UserLibs/Support/Inc/delay.h
 blancecar\ssd1306.o: ../Core/Inc/main.h
-blancecar\ssd1306.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
-blancecar\ssd1306.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdarg.h
+blancecar\ssd1306.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\ssd1306.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
