@@ -1,8 +1,8 @@
 blancecar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-blancecar\event_groups.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdlib.h
+blancecar\event_groups.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 blancecar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-blancecar\event_groups.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\event_groups.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\event_groups.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\event_groups.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
 blancecar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 blancecar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

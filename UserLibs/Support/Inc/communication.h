@@ -26,6 +26,9 @@
 #define CMD_SPEED_DOWN 0xC8
 #define CMD_ROAD_PLANNING 0xC9
 #define CMD_TURN_AROUND 0xCA 
+#define CMD_TURN_CLEAR 0xCB
+#define CMD_DOMINATE 0xCC
+#define CMD_DEFAULT 0xCD
 
 typedef union{
 	float data;

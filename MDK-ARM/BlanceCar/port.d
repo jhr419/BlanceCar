@@ -1,7 +1,7 @@
 blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
 blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-blancecar\port.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\port.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\port.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\port.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\port.o: ../Core/Inc/FreeRTOSConfig.h
 blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 blancecar\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

@@ -1,6 +1,8 @@
 #include "car.h"
 #include "pid2.h"
 #include "communication.h"
+#include "hc-sr04.h"
+#include "cmsis_os.h"
 
 // 定义左/右电机和编码器相关的硬件配置（定时器、GPIO端口与引脚）
 // Define hardware configuration for left/right motors and encoders
@@ -39,10 +41,12 @@
 Car car;
 
 int Vertical_out,Velocity_out,Turn_out; // 直立环&速度环&转向环的输出变量
-int RUNNING = 0;
+int RUNNING = 0;	//标记当前小车的运动状态
+int ROAD_MODE = 0;	//小车的避障模式
 int PWM_out;
 int PWM_MAX=30000,PWM_MIN=-30000;	// PWM限幅变量
 int MOTO1,MOTO2;
+int Init_target_value = 8;
 
 // 创建小车对象，初始化电机、编码器、IMU 和 PID 控制器
 // Create a car instance and initialize motors, encoders, IMU, and PID controllers
@@ -100,6 +104,7 @@ Car newCar(void){
 
 	// 启用电机驱动板（STBY 引脚拉高）
 	// Enable motor driver board (set STBY high)
+	car.bt_state = 0;
 	HAL_GPIO_WritePin(STBY_GPIO_Port, STBY_Pin, GPIO_PIN_SET);
 
 	// 绑定小车移动函数
@@ -111,29 +116,32 @@ Car newCar(void){
 
 int MotorPidCalc(){
 	int PWM_out;
+	
+	//运动相关指令
 	if(car.cmd == CMD_STOP) 		{car.target_speed = 0; RUNNING = 0;}
 	if(car.cmd == CMD_STOP_SLOWLY)	{
 		if(car.target_speed >= 4)	car.target_speed = car.target_speed * 0.5;
 		else	car.cmd = CMD_STOP;
 	}
 	if(car.cmd == CMD_FORWARD)  	{
-		if(RUNNING != 1)			{car.target_speed = 10;	RUNNING = 1;}
+		if(RUNNING != 1)			{car.target_speed = Init_target_value;	RUNNING = 1;}
 		else	RUNNING = 1;
 	}
 	if(car.cmd == CMD_BACKWARD) 	{
-		if(RUNNING != 2)			{car.target_speed = -10; RUNNING = 2;}
+		if(RUNNING != 2)			{car.target_speed = -1 * Init_target_value; RUNNING = 2;}
 		else	RUNNING = 2;
 	}
 	if(car.cmd == CMD_SPEED_UP)		{
-		if(RUNNING == 1) car.target_speed += 1;
-		if(RUNNING == 2) car.target_speed -= 1;
+		if(RUNNING == 1) {car.target_speed += 1;car.cmd = CMD_DEFAULT;}
+		if(RUNNING == 2) {car.target_speed -= 1;car.cmd = CMD_DEFAULT;}
 	}
 	if(car.cmd == CMD_SPEED_DOWN)	{
-		if(RUNNING == 1) car.target_speed -= 1;
-		if(RUNNING == 2) car.target_speed += 1;
+		if(RUNNING == 1) {if(car.target_speed > 0) car.target_speed -= 2; car.cmd = CMD_DEFAULT;}
+		if(RUNNING == 2) {if(car.target_speed < 0) car.target_speed += 2; car.cmd = CMD_DEFAULT;}
 	}
-	car.target_speed = CLAMP(car.target_speed, -16,16 );
+	car.target_speed = CLAMP(car.target_speed, -40, 40);
 	
+	//转向相关指令
 	if(car.cmd == CMD_STOP) 		car.target_turn = 0;
 	if(car.cmd == CMD_STOP_SLOWLY)	car.target_turn = 0;
 	if(car.cmd == CMD_LEFT)			car.target_turn = -3000;
@@ -142,7 +150,14 @@ int MotorPidCalc(){
 		if(car.target_speed == 0) car.target_speed = 0;
 		else car.target_turn = 5000;
 	}
-	if(car.cmd == CMD_CLEAR)		
+	if(car.cmd == CMD_TURN_CLEAR)	car.target_turn = 0;
+		
+	//辅助功能指令
+	if(car.cmd == CMD_DOMINATE)		{HAL_GPIO_TogglePin(STBY_GPIO_Port,STBY_Pin); car.cmd = CMD_DEFAULT;}
+	if(car.cmd == CMD_ROAD_PLANNING){
+		ROAD_MODE=(0==ROAD_MODE)?1:0;
+		car.cmd = CMD_DEFAULT;
+	}
 	
 	car.target_turn = CLAMP(car.target_turn, -5000, 5000);
 	    
@@ -183,11 +198,29 @@ void Limit(int *motoA,int *motoB)
 	if(*motoB<PWM_MIN)*motoB=PWM_MIN;
 }
 
+void Barrier(){
+	switch(ROAD_MODE){
+		case 0:
+			break;
+		case 1:
+			if(car.isBarrier)
+			car.cmd = CMD_BACKWARD;
+			
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		default:
+			break;	
+		}
+}
+
 // 小车移动控制函数
 // Car movement control function
 void CarMove(Car* self, int8_t setSpeed){
+	Barrier();
 	PWM_out=MotorPidCalc();
-//	Turn_out=Turn();
 	
 	// 如果倾角过大，进行刹车
 	// Brake if the tilt angle is too large
@@ -201,12 +234,11 @@ void CarMove(Car* self, int8_t setSpeed){
 	MOTO2 = PWM_out+0.8*Turn_out; // 右电机
 	
   Limit(&MOTO1,&MOTO2);     // PWM限幅
-	
-//	uart_printf(&huart_bt, "%f, %f, %f, %f\n", 				
-//		car.encoder_l.rpm, car.encoder_r.rpm, car.imu.roll, car.imu.gyrox
+//	uart_printf(&huart_pc, "%d, %d, %d, %d\n", 				
+//	car.isBarrier, car.cmd, car.target_speed,ROAD_MODE
 //		);
-//	uart_printf(&huart_pc, "%f, %f, %f, %f\n", 				
-//		car.encoder_l.rpm, car.encoder_r.rpm, car.imu.roll, car.imu.gyrox
+//	uart_printf(&huart_pc, "%d\n", 				
+//	Init_target_value
 //		);
   self->motor_l.Move(&self->motor_l, car.isBrake, MOTO1);
 	self->motor_r.Move(&self->motor_r, car.isBrake, MOTO2);

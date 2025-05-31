@@ -8,7 +8,7 @@ blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 blancecar\multitask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 blancecar\multitask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
 blancecar\multitask.o: ../Drivers/CMSIS/Include/core_cm4.h
-blancecar\multitask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\multitask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\multitask.o: ../Drivers/CMSIS/Include/cmsis_version.h
 blancecar\multitask.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 blancecar\multitask.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@ blancecar\multitask.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 blancecar\multitask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-blancecar\multitask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\multitask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -24,6 +24,9 @@ blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 blancecar\multitask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -50,15 +53,17 @@ blancecar\multitask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr
 blancecar\multitask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 blancecar\multitask.o: ../UserLibs/Devices/Inc/car.h
 blancecar\multitask.o: ../UserLibs/Devices/Inc/motor.h
-blancecar\multitask.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\multitask.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 blancecar\multitask.o: ../Core/Inc/tim.h
 blancecar\multitask.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\multitask.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\multitask.o: ../UserLibs/Bsp/Inc/MPU6500.h
-blancecar\multitask.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\multitask.o: ../UserLibs/Bsp/Inc/oled.h
 blancecar\multitask.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\multitask.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\multitask.o: ../UserLibs/Algorithm/Inc/filter.h
 blancecar\multitask.o: ../UserLibs/Algorithm/Inc/calibrate_angle.h
 blancecar\multitask.o: ../UserLibs/Devices/Inc/hc-sr04.h
 blancecar\multitask.o: ../UserLibs/Support/Inc/delay.h
+blancecar\multitask.o: ../UserLibs/Devices/Inc/potentiometers.h
+blancecar\multitask.o: ../Core/Inc/adc.h

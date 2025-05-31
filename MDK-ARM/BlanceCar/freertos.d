@@ -1,7 +1,7 @@
 blancecar\freertos.o: ../Core/Src/freertos.c
 blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-blancecar\freertos.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
-blancecar\freertos.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\freertos.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\freertos.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 blancecar\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -32,6 +32,9 @@ blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
 blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 blancecar\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h

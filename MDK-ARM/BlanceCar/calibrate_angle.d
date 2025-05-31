@@ -8,7 +8,7 @@ blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_d
 blancecar\calibrate_angle.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 blancecar\calibrate_angle.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
 blancecar\calibrate_angle.o: ../Drivers/CMSIS/Include/core_cm4.h
-blancecar\calibrate_angle.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdint.h
+blancecar\calibrate_angle.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 blancecar\calibrate_angle.o: ../Drivers/CMSIS/Include/cmsis_version.h
 blancecar\calibrate_angle.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 blancecar\calibrate_angle.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@ blancecar\calibrate_angle.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 blancecar\calibrate_angle.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-blancecar\calibrate_angle.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stddef.h
+blancecar\calibrate_angle.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -24,6 +24,9 @@ blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_e
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -36,12 +39,12 @@ blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_t
 blancecar\calibrate_angle.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/car.h
 blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/motor.h
-blancecar\calibrate_angle.o: D:\engineering software\keil5\keil5 5.24\ARM\ARMCC\Bin\..\include\stdio.h
+blancecar\calibrate_angle.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 blancecar\calibrate_angle.o: ../Core/Inc/tim.h
 blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/encoder.h
 blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/imu.h
 blancecar\calibrate_angle.o: ../UserLibs/Bsp/Inc/MPU6500.h
-blancecar\calibrate_angle.o: ../UserLibs/Devices/Inc/oled.h
+blancecar\calibrate_angle.o: ../UserLibs/Bsp/Inc/oled.h
 blancecar\calibrate_angle.o: ../UserLibs/Bsp/Inc/OLED_Data.h
 blancecar\calibrate_angle.o: ../UserLibs/Controller/Inc/pid.h
 blancecar\calibrate_angle.o: ../UserLibs/Algorithm/Inc/filter.h

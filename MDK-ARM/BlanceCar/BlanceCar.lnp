@@ -1,8 +1,9 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "blancecar\startup_stm32f401xe.o"
 "blancecar\main.o"
 "blancecar\gpio.o"
 "blancecar\freertos.o"
+"blancecar\adc.o"
 "blancecar\dma.o"
 "blancecar\i2c.o"
 "blancecar\tim.o"
@@ -12,6 +13,9 @@
 "blancecar\stm32f4xx_hal_timebase_tim.o"
 "blancecar\stm32f4xx_hal_tim.o"
 "blancecar\stm32f4xx_hal_tim_ex.o"
+"blancecar\stm32f4xx_hal_adc.o"
+"blancecar\stm32f4xx_hal_adc_ex.o"
+"blancecar\stm32f4xx_ll_adc.o"
 "blancecar\stm32f4xx_hal_rcc.o"
 "blancecar\stm32f4xx_hal_rcc_ex.o"
 "blancecar\stm32f4xx_hal_flash.o"
@@ -44,6 +48,7 @@
 "blancecar\imu.o"
 "blancecar\car.o"
 "blancecar\hc-sr04.o"
+"blancecar\potentiometers.o"
 "blancecar\filter.o"
 "blancecar\calibrate_angle.o"
 "blancecar\pid.o"

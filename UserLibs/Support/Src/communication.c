@@ -12,14 +12,7 @@ void uart_SendMsg(UART_HandleTypeDef *huart, uint8_t* msg){
 	HAL_UART_Transmit_IT(huart, msg, len);
 }
 
-void uart_ReadMsg(uint8_t* msg){
 	
-}
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-
-}
-
 void uart_printf(UART_HandleTypeDef *huart, const char *fmt, ...){
 	static uint8_t tx_buf[256] = {0};
 	static va_list ap;
@@ -49,8 +42,10 @@ void UART_IdleCallback(UART_HandleTypeDef* huart){
 		
 		uint16_t rx_len = huart->RxXferSize - huart->RxXferCount;
 
-		car.cmd = rx_data_buffer6[0];
-		uart_printf(&huart_pc,"%d", car.cmd);
+		if(!car.isBarrier)
+			car.cmd = rx_data_buffer6[0];
+		
+//		uart_printf(&huart_pc,"%d", car.cmd);
 		memset(rx_data_buffer6,0,BUF_SIZE);
 		
 		HAL_UART_Receive_DMA(&huart_bt, rx_data_buffer6, BUF_SIZE);

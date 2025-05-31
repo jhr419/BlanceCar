@@ -26,7 +26,8 @@ struct Car{
 	uint8_t isBrake;
 	float balance_bias;
 	uint8_t cmd;
-	
+	uint8_t isBarrier;
+	uint8_t bt_state;
 	Motor motor_l;
 	Motor motor_r;
 	Encoder encoder_l;

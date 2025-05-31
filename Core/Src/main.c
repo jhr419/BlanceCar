@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "adc.h"
 #include "dma.h"
 #include "i2c.h"
 #include "tim.h"
@@ -40,6 +41,7 @@
 #include "car.h"
 #include "communication.h"
 #include "OLED.h"
+#include "potentiometers.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,29 +118,24 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM9_Init();
   MX_TIM10_Init();
+  MX_TIM11_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   delay_init();
 	
-	OLED_Init();
-//  ssd1306_Init();
-  
-//  ssd1306_clear_color(Black);
-//  ssd1306_Printf(0,0, Font_7x10, White, "start!!");
-//  delay_ms(2000);
-//  ssd1306_clear_color(Black);
-  
+  OLED_Init();
 	
-	
-	
+//  ADC_init();
   car = newCar();
   HAL_TIM_Base_Start_IT(&htim9);
   HAL_TIM_Base_Start_IT(&htim10);
+  
   __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
   __HAL_UART_ENABLE_IT(&huart6, UART_IT_IDLE);
   HAL_UART_Receive_DMA(&huart2, rx_data_buffer2, BUF_SIZE);
   HAL_UART_Receive_DMA(&huart6, rx_data_buffer6, BUF_SIZE);
 	
-	
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
@@ -234,6 +231,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   {
     car.encoder_l.GetCount(&car.encoder_l);
     car.encoder_r.GetCount(&car.encoder_r);
+  }
+   else if (htim == &htim11){
+	car.cmd = CMD_STOP;
+	car.isBarrier = 0;
+	HAL_TIM_Base_Stop_IT(&htim11);
   }
   /* USER CODE END Callback 1 */
 }
